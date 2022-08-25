@@ -35,6 +35,7 @@ Vagrant.configure("2") do |config|
             h.enable_virtualization_extensions = false
             h.linked_clone = true
         end
+        node.vm.provision "shell", path: "scripts/init_config.sh"
       end
   end
 
@@ -50,6 +51,7 @@ Vagrant.configure("2") do |config|
             h.enable_virtualization_extensions = false
             h.linked_clone = true
         end
+        node.vm.provision "shell", path: "scripts/init_config.sh"
     end
   end
 end
