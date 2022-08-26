@@ -3,8 +3,7 @@ set -euxo
 
 #disable swap
 sudo swapoff -a
-sudo rm /swap.img
-sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+sudo sed -i '/swap/d' /etc/fstab
 
 ## Install CRI-O
 sudo apt update
